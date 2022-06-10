@@ -309,3 +309,4 @@ vector<KeyFrame*> KeyFrameDatabase::DetectRelocalizationCandidates(Frame *F)
 }
 
 } //namespace ORB_SLAM
+
