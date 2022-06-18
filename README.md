@@ -37,7 +37,7 @@ Visual SLAM에서 들어오는 정보는 카메라 화면이 전부이다. 이 �
 
 ​    
 
-​    ![2](C:\Users\qjsro\Desktop\마크다운\2.png)
+​    ![2](/image/2.png)
 
 ​    
 
@@ -45,7 +45,7 @@ Visual SLAM에서 들어오는 정보는 카메라 화면이 전부이다. 이 �
 
 
 
-![4](C:\Users\qjsro\Desktop\마크다운\4.png) ![3](C:\Users\qjsro\Desktop\마크다운\3.png)
+![4](/image/4.png) ![3](/image/3.png)
 
 ​    
 
@@ -55,7 +55,7 @@ Visual SLAM을 구현하는 여러 알고리즘들 중에서도 방법이 여러
 
 ​    
 
-​    ![5](C:\Users\qjsro\Desktop\마크다운\5.png)
+​    ![5](/image/5.png)
 
 ​    
 
@@ -63,7 +63,7 @@ Visual SLAM을 구현하는 여러 알고리즘들 중에서도 방법이 여러
 
 ​    
 
-​    ![6](C:\Users\qjsro\Desktop\마크다운\6.png)
+​    ![6](/image/6.png)
 
 ​    
 
@@ -97,9 +97,9 @@ PC 환경 설정
 
 ​    
 
-​    ![7](C:\Users\qjsro\Desktop\마크다운\7.png)
+​    ![7](/image/7.png)
 
-​    ![8](C:\Users\qjsro\Desktop\마크다운\8.png)
+​    ![8](/image/8.png)
 
 ​    
 
@@ -121,7 +121,7 @@ PC 환경 설정
 
 이후 앞선 작업에서 진행한 터틀봇3와 Remote PC의 연동을 통해 정보를 주고 받을 수 있게 되었기 때문에, 터틀봇3에서 받아들이는 정보를 이용하여 ORB SLAM 알고리즘에 입력으로 넣어주고 SLAM을 진행하면서 결과를 저장할 수 있도록 한다. 이 결과를 토대로 어떠한 기능을 수행하는지와 문제점을 파악하며 결론을 도출해낼 수 있다.
 
-​    ![9](C:\Users\qjsro\Desktop\마크다운\9.png)
+​    ![9](/image/9.png)
 
 
 
@@ -131,13 +131,13 @@ PC 환경 설정
 
 \1) Viewer + Webcam을 이용한 ORB SLAM
 
-​    ![10](C:\Users\qjsro\Desktop\마크다운\10.png)
+​    ![10](/image/10.png)
 
 ​    
 
 \2) Rviz + 터틀봇3을 이용한 ORB SLAM
 
-​    ![그림1](C:\Users\qjsro\Desktop\마크다운\그림1.gif)
+​    ![그림1](/image/그림1.gif)
 
 ​    
 
@@ -163,7 +163,7 @@ Pangolin이라는 ORB SLAM과 연동되는 openGL 라이브러리를 통해 View
 
 ​    
 
-​    ![12](C:\Users\qjsro\Desktop\마크다운\12.png)
+​    ![12](/image/12.png)
 
 
 
