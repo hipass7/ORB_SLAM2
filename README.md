@@ -9,7 +9,7 @@
 
 SLAM의 정의에 기재되어 있는 것처럼 가장 중요한 기능은 2가지이다. 자신의 위치를 추정하는 Localization과 동시에 지도를 작성하는 Mapping이다. 이 2가지를 동시에 동작하기 위해서는 생각보다 까다로운 과정들이 필요하다. 우리가 눈으로 바라보는 풍경들을 보며 그 풍경들을 기준으로 한 나의 위치를 파악하고 맵을 작성해본다고 생각하면 된다. 과연, 처음보는 풍경에서 한 쪽 눈을 가린채 그 풍경들까지의 거리를 파악하여 지도를 작성해 볼 수 있을까? 이와 관련해서 SLAM의 이론을 이해하고 직접 구현해봄으로써 조금 더 다가갈 수 있는 기회를 마련해본다.
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d825c6.bmp 원본 그림의 크기: 가로 506pixel, 세로 316pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445bf.bmp)  
+  ![1](C:\Users\qjsro\Desktop\마크다운\1.png)
 
 
 
@@ -37,17 +37,15 @@ Visual SLAM에서 들어오는 정보는 카메라 화면이 전부이다. 이 �
 
 ​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80001.bmp 원본 그림의 크기: 가로 1066pixel, 세로 371pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445c9.bmp)  
+​    ![2](C:\Users\qjsro\Desktop\마크다운\2.png)
 
 ​    
 
 먼저 카메라를 통해 이미지 입력을 받는다. 받은 이미지를 토대로 가공을 해야하는데, 주로 특징점 추출을 통해 이미지의 특징을 뽑아내고 화면이 움직이는 동안 그 이미지의 특징점이 어떻게 움직이는지 파악을 하게 된다. 그러면서 3D 상의 점을 추정하고 최적화과정을 거친다. 그렇다면, 3D 상의 점은 어떻게 추정할까? 카메라의 내부 파라미터를 알고 있다는 전제하에 행렬을 통한 정합 과정을 이용하여 추정한다. 다음과 같은 과정을 거치면 2D 이미지를 통해 3D 상의 점 위치를 복원해낼 수 있는 것이다.
 
-​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80002.bmp 원본 그림의 크기: 가로 325pixel, 세로 152pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445ca.bmp)  
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80003.bmp 원본 그림의 크기: 가로 454pixel, 세로 95pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445cb.bmp)  
+![4](C:\Users\qjsro\Desktop\마크다운\4.png) ![3](C:\Users\qjsro\Desktop\마크다운\3.png)
 
 ​    
 
@@ -57,7 +55,7 @@ Visual SLAM을 구현하는 여러 알고리즘들 중에서도 방법이 여러
 
 ​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80004.bmp 원본 그림의 크기: 가로 943pixel, 세로 421pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445cd.bmp)  
+​    ![5](C:\Users\qjsro\Desktop\마크다운\5.png)
 
 ​    
 
@@ -65,7 +63,7 @@ Visual SLAM을 구현하는 여러 알고리즘들 중에서도 방법이 여러
 
 ​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80005.bmp 원본 그림의 크기: 가로 612pixel, 세로 478pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445ce.bmp)  
+​    ![6](C:\Users\qjsro\Desktop\마크다운\6.png)
 
 ​    
 
@@ -99,9 +97,9 @@ PC 환경 설정
 
 ​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80006.bmp 원본 그림의 크기: 가로 607pixel, 세로 193pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445d6.bmp)  
+​    ![7](C:\Users\qjsro\Desktop\마크다운\7.png)
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80007.bmp 원본 그림의 크기: 가로 607pixel, 세로 147pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445d7.bmp)  
+​    ![8](C:\Users\qjsro\Desktop\마크다운\8.png)
 
 ​    
 
@@ -123,7 +121,7 @@ PC 환경 설정
 
 이후 앞선 작업에서 진행한 터틀봇3와 Remote PC의 연동을 통해 정보를 주고 받을 수 있게 되었기 때문에, 터틀봇3에서 받아들이는 정보를 이용하여 ORB SLAM 알고리즘에 입력으로 넣어주고 SLAM을 진행하면서 결과를 저장할 수 있도록 한다. 이 결과를 토대로 어떠한 기능을 수행하는지와 문제점을 파악하며 결론을 도출해낼 수 있다.
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80009.bmp 원본 그림의 크기: 가로 808pixel, 세로 458pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445d9.bmp)  
+​    ![9](C:\Users\qjsro\Desktop\마크다운\9.png)
 
 
 
@@ -133,13 +131,13 @@ PC 환경 설정
 
 \1) Viewer + Webcam을 이용한 ORB SLAM
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d80008.bmp 원본 그림의 크기: 가로 692pixel, 세로 540pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445dd.bmp)  
+​    ![10](C:\Users\qjsro\Desktop\마크다운\10.png)
 
 ​    
 
 \2) Rviz + 터틀봇3을 이용한 ORB SLAM
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d8000a.bmp 원본 그림의 크기: 가로 765pixel, 세로 440pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445de.bmp)  
+​    ![그림1](C:\Users\qjsro\Desktop\마크다운\그림1.gif)
 
 ​    
 
@@ -165,7 +163,7 @@ Pangolin이라는 ORB SLAM과 연동되는 openGL 라이브러리를 통해 View
 
 ​    
 
-  ![그림입니다. 원본 그림의 이름: CLP000008d8000b.bmp 원본 그림의 크기: 가로 1152pixel, 세로 456pixel](file:///C:\Users\qjsro\AppData\Local\Temp\Hnc\BinData\EMB0000332445e0.bmp)  
+​    ![12](C:\Users\qjsro\Desktop\마크다운\12.png)
 
 
 
